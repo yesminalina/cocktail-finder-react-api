@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Accordion from 'react-bootstrap/Accordion';
-import './MiApi.css'
+import '../assets/css/MiApi.css'
 
 const MiApi = ({setDrinksList, drinksFilter, errorApi, setErrorApi}) => {
 

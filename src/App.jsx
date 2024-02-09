@@ -5,12 +5,15 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import MiApi from './components/MiApi'
 import Buscador from './components/Buscador';
+import Selector from './components/Selector';
 
 const App = () => {
 
   const [drinksList, setDrinksList] = useState([])
   const [drinksFilter, setDrinksFilter] = useState([])
   const [errorApi, setErrorApi] = useState([''])
+
+  const licors = ['rum', 'vodka', 'pisco', 'wine', 'beer', 'gin'].sort()
 
   return (
     <div>
@@ -29,6 +32,13 @@ const App = () => {
             drinksList={drinksList}
             drinksFilter={drinksFilter}
             setDrinksFilter={setDrinksFilter}/> 
+          <article>
+            <Selector licors={licors}
+            drinksList={drinksList}
+            drinksFilter={drinksFilter}
+            setDrinksFilter={setDrinksFilter} />
+          </article>
+          
         </Container>
       </Navbar>
       <MiApi 
